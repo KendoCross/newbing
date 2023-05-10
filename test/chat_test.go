@@ -8,7 +8,7 @@ import (
 )
 
 func TestSMS(t *testing.T) {
-	bingChat, err := newbing.NewChat(" new bing cookie ")
+	bingChat, err := newbing.NewChat("new bing cookie ")
 	if err != nil {
 		t.Error(err)
 		return

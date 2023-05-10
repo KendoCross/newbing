@@ -3,6 +3,7 @@ module github.com/KendoCross/newbing
 go 1.20
 
 require (
+	github.com/dlclark/regexp2 v1.9.0
 	github.com/fasthttp/websocket v1.5.3
 	github.com/google/uuid v1.3.0
 	github.com/samber/lo v1.38.1

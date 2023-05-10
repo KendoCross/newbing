@@ -2,7 +2,7 @@
 
 new bing API
 
-## example
+## new bing chat
 
 ```golang
 
@@ -28,5 +28,28 @@ new bing API
         return
     }
     println(ans)
+    
+```
+
+## new bing image generation
+
+```golang
+
+    import "github.com/KendoCross/newbing"
+    
+    bingImgGen := newbing.NewImgGen("new bing cookie")
+    ctx, cancel := context.WithTimeout(context.Background(), time.Minute)
+    defer cancel()
+
+    imgURLsCh, err := bingImgGen.GenImgAync(ctx, "功夫熊猫")
+    if err != nil {
+        t.Error(err)
+        return
+    }
+
+    imgURLs := <-imgURLsCh
+    for _, url := range imgURLs {
+        println(url)
+    }
     
 ```
